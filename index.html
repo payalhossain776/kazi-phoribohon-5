@@ -93,7 +93,7 @@
       </div>
       <div class="stat">
          <p class="stat-value">New15</p>
-         <h1 class="stat-title">copon code</h1>
+         <h1 id="copon-code1" class="stat-title">copon-code</h1>
       </div>
 </section>
          <!--couple section -->
@@ -105,7 +105,7 @@
       </div>
       <div class="stat">
          <p class="stat-value">couple code</p>
-         <h1 class="stat-title">copon code</h1>
+         <h1 id="copon-code2" class="stat-title">copon code</h1>
       </div>
 </section> 
 </section> 
@@ -123,7 +123,7 @@
        <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined </p>
 </section>
           <!-- greenlain poribhon -->
-<section class="flex justify-around items-center">
+<section class="flex justify-around items-center mb-6">
 <div class="bg-[#FFFFFF] p-3 rounded-xl">
       <div class="flex justify-between  ">
             <div class="flex gap-8 bg-[#FFFFFF]">
@@ -277,32 +277,32 @@
                              <h6 class="footer-title">price</h6>
                  </div>
                        <p>----------------------------------------------------------------------------------------</p>
-                 <div class="flex justify-between items-center">
+                 <div id="price-container" class="flex justify-between items-center">
                              <h1 class="">C2</h1>
                              <h1 class="">economoy</h1>
-                             <p id="price-one">0</p>
+                             <p id="price-one" class="">0</p>
                  </div>
                        <br>
-                 <div class="flex justify-between items-center">
+                 <div id="ticket-container" class="flex justify-between items-center">
                              <h1 class="">C2</h1>
                              <h1 class="">economoy</h1>
-                             <p id="price-two">0</p>
+                             <p id="" class="price-ticket">0</p>
                  </div>
                        <p>----------------------------------------------------------------------------------------</p>
-                          <p>Total cost : <Span id="total-cost-seat boking">0</Span>$</p>
+                          <p>Total cost : <Span id="total-cost-seat-boking">0</Span>$</p>
                        <br> <br>
                  <div class="join bg-[#F7F8F8]  flex justify-center items-center">
-                             <input type="text" placeholder="Have any copon" class="input input-bordered join-item" />
-                             <button class="btn bg-[#1DD100] text-[white] join-item">Apply</button>
+                             <input id="copon-code" type="text" placeholder="Have any copon" class="input input-bordered join-item" />
+                             <button onclick="ubdateGrandTotal('apply-now-btn')" class="btn bg-[#1DD100] text-[white] join-item">Apply</button>
                  </div>
                         <br> <br>
-                 <p>grand-total : <Span id="total-cost-seat boking">0</Span>$</p>
+                 <p>grand-total : <Span id="grand-cost-seat-boking">0</Span>$</p>
            </section>
            <!-- input faild -->
            <form class="card-body bg-white">
             <div class="form-control">
                <label class="label"> <span class="label-text">Name</span> </label>
-               <input type="name" placeholder="Enter your name " class="input input-bordered" required />
+               <input type="name" placeholder="Enter your name " class="input input-bo0rdered" required />
             </div>
             <!--  -->
             <div class="form-control">

@@ -15,31 +15,35 @@ let count =0;
 
 for(const allBtn of allSeatBtn){
     allBtn.addEventListener('click',function(e){
-       count +=1;
+     
+
                                //  price550
        const ticketPrice =e.target.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[3].childNodes[0].innerText;
        const ticketPriceSell =parseInt(ticketPrice);
-                               //  40seat
-       const seat40bokingSell =e.target.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[5].childNodes[1].childNodes[1].childNodes[5].childNodes[3].childNodes[0].innerText
+                               //  seat
+                               const firstCount =getelementByidFOAdd('set-seat');
+                               if(firstCount + 1 > 40){
+                                  return;
+                               }
      
                               //   price boking
-       const oneSeatPrice =document.getElementById('price-one').innerText;
+       const oneSeatPrice =document.getElementsByClassName('price-one').innerText;
        const seatPerPrice =parseInt(oneSeatPrice);
        document.getElementById('price-one').innerText = ticketPriceSell;
-      
-                              //  total
-       const oneSeatPrice5 =document.getElementById('total-cost-seat boking').innerText;
-       const seatPerPrice5 =parseInt(oneSeatPrice5);
-       document.getElementById('total-cost-seat boking').innerText = seatPerPrice5 + ticketPriceSell;
+                          
+  
+    const seatSeal =getelementByidFOAdd('set-seat');
+      document.getElementById('set-seat').innerText=seatSeal + 1;
 
-                                 // seat count start
-       if(parseInt(seat40bokingSell)-1 < 0){
-        return;
-     }
-     document.getElementById('seatBokingTO').innerText = parseInt(seat40bokingSell)-1;
-     setToInnerText('set-seat', count)
-                                //   seat countend
+      const seatBooking =getelementByidFOAdd('seatBokingTO');
+      document.getElementById('seatBokingTO').innerText= seatBooking - 1;
+  
+                                            //  total
+                   totalCostSeatBoking(ticketPriceSell);
+                   // grand-total-cost
+        ubdateGrandTotal()
     })
 }
+
 
 
